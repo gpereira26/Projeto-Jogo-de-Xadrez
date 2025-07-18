@@ -1,4 +1,5 @@
-﻿using tabuleiro;
+﻿using ProjJogoXadrez.tabuleiro.Enums;
+using tabuleiro;
 
 namespace ProjJogoXadrez.tabuleiro
 {

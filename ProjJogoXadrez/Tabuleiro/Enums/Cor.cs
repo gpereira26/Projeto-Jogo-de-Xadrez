@@ -1,4 +1,4 @@
-﻿namespace ProjJogoXadrez.tabuleiro
+﻿namespace ProjJogoXadrez.tabuleiro.Enums
 {
     enum Cor
     {
