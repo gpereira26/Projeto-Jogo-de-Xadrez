@@ -1,7 +1,7 @@
-﻿using ProjJogoXadrez.tabuleiro;
-using ProjJogoXadrez.tabuleiro.Enums;
+﻿using tabuleiro;
+using tabuleiro.Enums;
 
-namespace ProjJogoXadrez.xadrez
+namespace xadrez
 {
     internal class Torre : Peca
     {

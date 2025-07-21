@@ -1,6 +1,4 @@
-﻿using tabuleiro;
-
-namespace ProjJogoXadrez.tabuleiro
+﻿namespace tabuleiro
 {
     internal class Tabuleiro
     {

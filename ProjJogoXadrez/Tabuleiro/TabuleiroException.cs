@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ProjJogoXadrez.tabuleiro
+namespace tabuleiro
 {
     internal class TabuleiroException : Exception
     {

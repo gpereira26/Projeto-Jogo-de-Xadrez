@@ -1,5 +1,4 @@
-﻿using ProjJogoXadrez.tabuleiro;
-using System;
+﻿using tabuleiro;
 
 namespace ProjJogoXadrez
 {
