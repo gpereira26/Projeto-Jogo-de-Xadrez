@@ -16,8 +16,15 @@ namespace ProjJogoXadrez
                     Tela.ImprimirTabuleiro(partida.Tab);
 
                     Console.WriteLine();
-                    Console.WriteLine("Digite a Posição de Origem: ");
+                    Console.Write("Digite a Posição de Origem: ");
                     Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+
+                    bool[,] PosicoesPossiveis = partida.Tab.peca(origem).MovimentosPossiveis();
+
+                    Console.Clear();
+                    Tela.ImprimirTabuleiro(partida.Tab, PosicoesPossiveis);
+
+
                     Console.Write("Digite a Posição de Destino: ");
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
