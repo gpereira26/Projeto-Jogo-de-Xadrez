@@ -48,7 +48,7 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
 
-                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna + 1);
             }
 
             // sudoeste
@@ -58,16 +58,16 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
 
-                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna - 1);
             }
-            //note
+            //norte
                 pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
                 while (Tab.PosicaoValida(pos) && PodeMover(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                     if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
 
-                    pos.Linha = pos.Linha - 1;
+                    pos.DefinirValores(pos.Linha - 1, pos.Coluna);
                 }
                 // sul
                 pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
@@ -78,8 +78,8 @@ namespace xadrez
                     //testar se da para tirar esse if
                     if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
 
-                    pos.Linha = pos.Linha + 1;
-                }
+                    pos.DefinirValores(pos.Linha + 1, pos.Coluna);
+            }
 
                 // leste
                 pos.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
@@ -88,8 +88,8 @@ namespace xadrez
                     mat[pos.Linha, pos.Coluna] = true;
                     if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
 
-                    pos.Coluna = pos.Coluna + 1;
-                }
+                    pos.DefinirValores(pos.Linha, pos.Coluna + 1);
+            }
 
                 // oeste
                 pos.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
@@ -98,8 +98,8 @@ namespace xadrez
                     mat[pos.Linha, pos.Coluna] = true;
                     if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
 
-                    pos.Coluna = pos.Coluna - 1;
-                }
+                    pos.DefinirValores(pos.Linha, pos.Coluna - 1);
+            }
 
                 return mat;
         }

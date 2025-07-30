@@ -1,6 +1,5 @@
 ﻿using xadrez;
 using tabuleiro;
-using tabuleiro.Enums;
 namespace ProjJogoXadrez
 {
     class Program
@@ -31,7 +30,7 @@ namespace ProjJogoXadrez
                         Console.Write("Digite a Posição de Destino: ");
                         Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
                         partida.ValidarPosicaoDeDestino(origem, destino);
-;
+
                         partida.RealizaJogada(origem, destino);
                     }
                     catch (TabuleiroException e)
@@ -47,7 +46,6 @@ namespace ProjJogoXadrez
             {
                 Console.WriteLine(ex.Message);
             }
-                Console.ReadLine();
 
         }
     }

@@ -1,4 +1,4 @@
-﻿using System.Reflection.PortableExecutable;
+﻿
 using tabuleiro;
 
 namespace xadrez
@@ -16,8 +16,6 @@ namespace xadrez
 
         public Posicao ToPosicao()
         {
-            if (Coluna == 'A')
-            return new Posicao(8 - Linha, Coluna - 'A');
             return new Posicao(8 - Linha, Coluna - 'a');
 
         }

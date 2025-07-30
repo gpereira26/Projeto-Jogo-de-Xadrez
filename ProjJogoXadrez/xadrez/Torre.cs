@@ -33,11 +33,8 @@ namespace xadrez
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-
-                //testar se da para tirar esse if
                 if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor) break;
-
-                pos.Linha = pos.Linha + 1;
+                pos.Linha = pos.Linha + 1; // <--- ADICIONE ESTA LINHA DE VOLTA
             }
 
             // leste

@@ -4,7 +4,7 @@
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        private Peca[,] Pecas { get; set; }
+        private Peca[,] Pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
@@ -30,7 +30,7 @@
         }
         public void ColocarPeca(Peca p, Posicao pos)
         {
-            if (ExistePeca(pos)) throw new TabuleiroException("Já existe uma peça nessa posição.");
+            if (ExistePeca(pos)) { throw new TabuleiroException("Já existe uma peça nessa posição."); }
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
